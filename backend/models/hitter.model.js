@@ -21,41 +21,40 @@ const hitterSchema = new mongoose.Schema({
     },
     AB: {
         type: Number,
-        required: true
+        default: 0
     },
     H: {
         type: Number,
-        required: true
+        default: 0
     },
     Doubles: {
         type: Number,
-        required: true
+        default: 0
     },
     Triples: {
         type: Number,
-        required: true
+        default: 0
     },
     HR: {
         type: Number,
-        required: true
+        default: 0
     },
     RBI: {
         type: Number,
-        required: true
+        default: 0
     },
     R: {
         type: Number,
-        required: true
+        default: 0
     },
     SB: {
         type: Number,
-        required: true
+        default: 0
     },
     CS: {
         type: Number,
-        required: true
-    },
-    timestamps: true
+        default: 0
+    }
 })
 
 const Hitter = mongoose.model('Hitter', hitterSchema);

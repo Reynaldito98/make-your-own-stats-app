@@ -16,13 +16,12 @@ const teamSchema = new mongoose.Schema({
     },
     wins: {
         type: Number,
-        required: true
+        default: 0
     },
     losses: {
         type: Number,
-        required: true
-    },
-    timestamps: true
+        default: 0
+    }
 })
 
 const Team = mongoose.model('Team', teamSchema);
