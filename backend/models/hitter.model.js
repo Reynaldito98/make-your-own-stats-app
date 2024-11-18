@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import validator from "validator";
 
 const hitterSchema = new mongoose.Schema({
     name: {
@@ -58,4 +59,4 @@ const hitterSchema = new mongoose.Schema({
 })
 
 const Hitter = mongoose.model('Hitter', hitterSchema);
-export default Hitter
+export default Hitter;
