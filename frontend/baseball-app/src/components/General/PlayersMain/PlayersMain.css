@@ -1,0 +1,89 @@
+.players-main {
+    min-height: 100%;
+    padding-left: 20px;
+    padding-right: 50px;
+    padding-bottom: 100px;
+    position: relative;
+    margin: 0px;
+    color: #fff;
+}
+
+.players-main__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.players-main__heading {
+    font-size: 25px;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.players-main__add-player {
+    height: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 20px;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.players-main__add-player:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.players-main__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.players-main__change-order {
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    padding: 15px 30px;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    background-color: rgb(33, 32, 32);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.players-main__change-order:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.players-main__background-image-pitcher {
+    background-image: url('../../../images/pitcher.jpg');
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -100;
+    filter: brightness(50%);
+}
+
+.players-main__background-image-hitter {
+    background-image: url('../../../images/hitter.jpg');
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -100;
+    filter: brightness(50%);
+}

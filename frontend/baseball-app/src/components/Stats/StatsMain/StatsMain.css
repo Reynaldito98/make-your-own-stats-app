@@ -1,0 +1,34 @@
+.stats{
+    position: relative;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.stats__background {
+    position: absolute;
+    background-image: url('../../../images/stats.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -100;
+    min-height: 100vh;
+    filter: brightness(50%);
+}
+
+.stats__link-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    padding: 30px;
+}
+
+.stats__link {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
