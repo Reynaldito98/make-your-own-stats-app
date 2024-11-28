@@ -2,7 +2,7 @@ import '../../General/PlayersMain/PlayersMain.css';
 import PlayersMain from '../../General/PlayersMain/PlayersMain';
 import Hitter from '../Hitter/Hitter';
 
-function HittersMain() {
+function HittersMain({handleOpen}) {
     return (
         <PlayersMain>
             <div className="players-main__background-image-hitter">
@@ -11,7 +11,7 @@ function HittersMain() {
 
             <header className="players-main__header">
                 <h3 className="players-main__heading">Batting Order</h3>
-                <button className="players-main__add-player">Add player</button>
+                <button className="players-main__add-player" onClick={handleOpen}>Add player</button>
             </header>
 
             <ul className="players-main__list">

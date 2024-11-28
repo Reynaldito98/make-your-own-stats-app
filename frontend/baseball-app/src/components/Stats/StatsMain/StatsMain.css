@@ -1,7 +1,7 @@
 .stats{
     position: relative;
-    min-height: 100vh;
     color: #fff;
+    padding-bottom: 40px;
 }
 
 .stats__background {
@@ -14,7 +14,7 @@
     left: 0px;
     width: 100%;
     z-index: -100;
-    min-height: 100vh;
+    height: 100%;
     filter: brightness(50%);
 }
 

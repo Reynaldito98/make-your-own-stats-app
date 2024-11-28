@@ -13,7 +13,6 @@ function Header() {
                 <Link to="/hitters" className="header__link">Hitters</Link>
                 <Link to="/pitchers" className="header__link">Pitchers</Link>
                 <Link to="/stats" className="header__link">Stats</Link>
-                <Link to="/rankings" className="header__link">Rankings</Link>
             </div>
         </header>
     )
