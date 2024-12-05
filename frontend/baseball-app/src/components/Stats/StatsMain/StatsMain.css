@@ -2,6 +2,7 @@
     position: relative;
     color: #fff;
     padding-bottom: 40px;
+    overflow: hidden;
 }
 
 .stats__background {

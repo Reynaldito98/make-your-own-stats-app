@@ -23,6 +23,7 @@
 .player__name {
     font-size: 21px;
     font-weight: 500;
+    width: 300px;
 }
 
 .player__position {
@@ -38,6 +39,11 @@
 .player__stats {
     font-weight: 500;
     margin-top: 35px;
+    padding: 0px;
+}
+
+.player__stats_first {
+    padding-top: 18px;
 }
 
 .player__release {

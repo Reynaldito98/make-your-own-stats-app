@@ -9,9 +9,9 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-app.use('/team', teamRouter);
-app.use('/hitter', hitterRoutes);
-app.use('/pitcher', pitcherRoutes);
+app.use('/api/team', teamRouter);
+app.use('/api/hitter', hitterRoutes);
+app.use('/api/pitcher', pitcherRoutes);
 
 app.listen(4000, () => {
     connectDB();

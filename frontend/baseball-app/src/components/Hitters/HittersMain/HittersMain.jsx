@@ -2,7 +2,7 @@ import '../../General/PlayersMain/PlayersMain.css';
 import PlayersMain from '../../General/PlayersMain/PlayersMain';
 import Hitter from '../Hitter/Hitter';
 
-function HittersMain({handleOpen}) {
+function HittersMain({handleOpen, handleEditPlayerOpen, handleConfirmationOpen, hitterData, handleSelectedPlayer, handleDeleteHitter}) {
     return (
         <PlayersMain>
             <div className="players-main__background-image-hitter">
@@ -15,9 +15,11 @@ function HittersMain({handleOpen}) {
             </header>
 
             <ul className="players-main__list">
-                <Hitter></Hitter>
-                <Hitter></Hitter>
-                <Hitter></Hitter>
+                {
+                    hitterData.slice(0, 9).map((hitter, index) => {
+                        return <Hitter key={index} handleEditPlayerOpen={handleEditPlayerOpen} handleConfirmationOpen={handleConfirmationOpen} hitter={hitter} handleSelectedPlayer={handleSelectedPlayer} handleDeleteHitter={handleDeleteHitter}></Hitter>
+                    })
+                }
             </ul>
 
             <header className="players-main__header">
@@ -25,9 +27,11 @@ function HittersMain({handleOpen}) {
             </header>
 
             <ul className="players-main__list">
-                <Hitter></Hitter>
-                <Hitter></Hitter>
-                <Hitter></Hitter>
+                {
+                    hitterData.slice(9).map((hitter, index) => {
+                        return <Hitter key={index} handleEditPlayerOpen={handleEditPlayerOpen} handleConfirmationOpen={handleConfirmationOpen} hitter={hitter} handleSelectedPlayer={handleSelectedPlayer}></Hitter>
+                    })
+                }
             </ul>
         </PlayersMain>
     )

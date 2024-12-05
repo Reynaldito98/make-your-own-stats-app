@@ -1,32 +1,62 @@
 import './HittersStatsMain.css';
 import Stats from '../Stats/Stats';
+import { useEffect, useState } from 'react';
 
-function HittersStatsMain() {
+function HittersStatsMain({hitterData, modalOpened}) {
+    const [organizedByHits, setOrganizedByHits] = useState([]);
+    const [organizedByAb, setOrganizedByAb] = useState([]);
+    const [organizedByHr, setOrganizedByHr] = useState([]);
+    const [organizedByRbi, setOrganizedByRbi] = useState([]);
+    const [organizedBySb, setOrganizedBySb] = useState([]);
+    const [organizedByR, setOrganizedByR] = useState([]);
+    const [organizedByDoubles, setOrganizedByDoubles] = useState([]);
+    const [organizedByTriples, setOrganizedByTriples] = useState([]);
+    const [organizedByAverage, setOrganizedByAverage] = useState([]);
+
+    useEffect(() => {
+        setOrganizedByHits(hitterData.slice(0).sort((a, b) => b.H - a.H));
+        setOrganizedByAb(hitterData.slice(0).sort((a, b) => b.AB - a.AB));
+        setOrganizedByHr(hitterData.slice(0).sort((a, b) => b.HR - a.HR));
+        setOrganizedByRbi(hitterData.slice(0).sort((a, b) => b.RBI - a.RBI));
+        setOrganizedBySb(hitterData.slice(0).sort((a, b) => b.SB - a.SB));
+        setOrganizedByR(hitterData.slice(0).sort((a, b) => b.R - a.R));
+        setOrganizedByDoubles(hitterData.slice(0).sort((a, b) => b.Doubles - a.Doubles));
+        setOrganizedByTriples(hitterData.slice(0).sort((a, b) => b.Triples - a.Triples));
+        setOrganizedByAverage(hitterData.slice(0).sort((a, b) => (b.H * 1000 / b.AB) - (a.H * 1000 / a.AB)))
+    }, [hitterData, modalOpened])
+
+    organizedByAverage.map(player=>{
+        player['AVG'] = `.${Math.round(player.H * 1000 / player.AB)}`;
+    })
+
     return (
         <ul className="hitters-stats">
             <li>
-                <Stats></Stats>
+                <Stats category="AVG" leaders={organizedByAverage}></Stats>
             </li>
             <li>
-                <Stats></Stats>
+                <Stats category="AB" leaders={organizedByAb}></Stats>
             </li>
             <li>
-                <Stats></Stats>
+                <Stats category="H" leaders={organizedByHits}></Stats>
             </li>
             <li>
-                <Stats></Stats>
+                <Stats category="HR" leaders={organizedByHr}></Stats>
             </li>
             <li>
-                <Stats></Stats>
+                <Stats category="RBI" leaders={organizedByRbi}></Stats>
             </li>
             <li>
-                <Stats></Stats>
+                <Stats category="R" leaders={organizedByR}></Stats>
             </li>
             <li>
-                <Stats></Stats>
+                <Stats category="SB" leaders={organizedBySb}></Stats>
             </li>
             <li>
-                <Stats></Stats>
+                <Stats category="Doubles" leaders={organizedByDoubles}></Stats>
+            </li>
+            <li>
+                <Stats category="Triples" leaders={organizedByTriples}></Stats>
             </li>
         </ul>
     )

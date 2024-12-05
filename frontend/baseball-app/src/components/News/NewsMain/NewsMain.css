@@ -5,6 +5,8 @@
     position: relative;
     color: #fff;
     padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
 }
 
 .news-main__background {
@@ -33,4 +35,22 @@
     grid-template-columns: 360px 360px 360px;
     grid-gap: 20px;
     justify-content: center;
+}
+
+.news-main__show-more {
+    margin-left: auto;
+    margin-right: auto;
+    justify-self: center;
+    margin-top: 50px;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    border: none;
+}
+
+.news-main__show-more:hover {
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
 }

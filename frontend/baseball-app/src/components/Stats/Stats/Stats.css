@@ -1,3 +1,11 @@
+.table__title {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
 .table {
     color: #000;
     background-color: #fff;
@@ -8,7 +16,7 @@
 }
 
 .table__name {
-    width: 250px;
+    width: 200px;
 }
 
 td {

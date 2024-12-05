@@ -18,6 +18,8 @@ function NewsMain() {
                 <Card></Card>
                 <Card></Card>
             </ul>
+
+            <button className="news-main__show-more">Show more</button>
         </main>
     )
 }
