@@ -33,3 +33,7 @@
     font-weight: 500;
     color: #fff;
 }
+
+.stats__link_active {
+    opacity: 0.5;
+}

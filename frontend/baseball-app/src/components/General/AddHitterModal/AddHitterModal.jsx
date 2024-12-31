@@ -14,9 +14,8 @@ function AddHitterModal({modalOpened, handleClose, handleCreateHitter}) {
     const [imageValid, setImageValid] = useState(false);
 
     const handleSubmitForm = evt => {
-        handleCreateHitter(name, position, imageUrl);
-        handleClose();
         evt.preventDefault();
+        handleCreateHitter(name, position, imageUrl);
     }
 
     const handleName = (evt) => {

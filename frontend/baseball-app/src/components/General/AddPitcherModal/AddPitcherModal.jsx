@@ -1,6 +1,6 @@
 import '../ModalWithForm/ModalWithForm.css';
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function AddPitcherModal({modalOpened, handleClose, handleCreatePitcher}) {
     const [name, setName] = useState('');
@@ -14,9 +14,8 @@ function AddPitcherModal({modalOpened, handleClose, handleCreatePitcher}) {
     const [imageValid, setImageValid] = useState(false);
 
     const handleSubmit = evt => {
-        handleCreatePitcher(name, position, imageUrl);
-        handleClose()
         evt.preventDefault();
+        handleCreatePitcher(name, position, imageUrl);
     }
 
     const handleName = (evt) => {
@@ -54,6 +53,12 @@ function AddPitcherModal({modalOpened, handleClose, handleCreatePitcher}) {
             setImageValid(false);
         }
     }
+
+    useEffect(() => {
+        setName("");
+        setPosition("");
+        setImageUrl("");
+    }, [modalOpened])
 
     return (
         <ModalWithForm modalOpened={modalOpened} handleClose={handleClose}>

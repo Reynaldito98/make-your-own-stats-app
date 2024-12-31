@@ -28,6 +28,17 @@
     transition: 0.3s ease-in-out;
 }
 
+.header__link_active {
+    opacity: 0.5;
+}
+
 .header__link:hover {
     opacity: 0.5;
+}
+
+.header__link_logout {
+    background-color: transparent;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
 }

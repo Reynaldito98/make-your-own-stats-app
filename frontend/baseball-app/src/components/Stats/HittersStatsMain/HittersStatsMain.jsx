@@ -32,31 +32,31 @@ function HittersStatsMain({hitterData, modalOpened}) {
     return (
         <ul className="hitters-stats">
             <li>
-                <Stats category="AVG" leaders={organizedByAverage}></Stats>
+                <Stats category="AVG" leaders={organizedByAverage} heading="Average"></Stats>
             </li>
             <li>
-                <Stats category="AB" leaders={organizedByAb}></Stats>
+                <Stats category="AB" leaders={organizedByAb} heading="At Bats"></Stats>
             </li>
             <li>
-                <Stats category="H" leaders={organizedByHits}></Stats>
+                <Stats category="H" leaders={organizedByHits} heading="Hits"></Stats>
             </li>
             <li>
-                <Stats category="HR" leaders={organizedByHr}></Stats>
+                <Stats category="HR" leaders={organizedByHr} heading="Home runs"></Stats>
             </li>
             <li>
-                <Stats category="RBI" leaders={organizedByRbi}></Stats>
+                <Stats category="RBI" leaders={organizedByRbi} heading="Runs batted in"></Stats>
             </li>
             <li>
-                <Stats category="R" leaders={organizedByR}></Stats>
+                <Stats category="R" leaders={organizedByR} heading="Runs"></Stats>
             </li>
             <li>
-                <Stats category="SB" leaders={organizedBySb}></Stats>
+                <Stats category="SB" leaders={organizedBySb} heading="Stolen bases"></Stats>
             </li>
             <li>
-                <Stats category="Doubles" leaders={organizedByDoubles}></Stats>
+                <Stats category="Doubles" leaders={organizedByDoubles} heading="Doubles"></Stats>
             </li>
             <li>
-                <Stats category="Triples" leaders={organizedByTriples}></Stats>
+                <Stats category="Triples" leaders={organizedByTriples} heading="Triples"></Stats>
             </li>
         </ul>
     )

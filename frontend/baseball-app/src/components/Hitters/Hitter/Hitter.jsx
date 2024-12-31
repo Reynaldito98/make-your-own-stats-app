@@ -3,8 +3,8 @@ import Player from '../../General/Player/Player';
 
 function Hitter({handleEditPlayerOpen, handleConfirmationOpen, hitter, handleSelectedPlayer}) {
     const handleClick = () => {
-        handleEditPlayerOpen()
-        handleSelectedPlayer(hitter)
+        handleEditPlayerOpen();
+        handleSelectedPlayer(hitter);
     }
 
     const handleRelease = () => {

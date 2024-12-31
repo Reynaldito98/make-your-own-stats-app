@@ -81,7 +81,7 @@ function EditHitterModal({modalOpened, handleClose, selectedPlayer, handleUpdate
         } else {
             setRbiValid(false);
         }
-        evt.target.min = hr;
+        evt.target.min = Number(hr);
     }
 
     const handleSb = (evt) => {

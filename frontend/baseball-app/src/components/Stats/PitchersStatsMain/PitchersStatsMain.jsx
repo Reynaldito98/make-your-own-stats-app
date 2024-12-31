@@ -30,29 +30,29 @@ function PitchersStatsMain({pitcherData, modalOpened}) {
     return (
         <ul className="pitchers-stats">
             <li>
-                <Stats category="ERA" leaders={organizedByEra}></Stats>
+                <Stats category="ERA" leaders={organizedByEra} heading="Earned runs average"></Stats>
             </li>
             <li>
-                <Stats category="IP" leaders={organizedByIp}></Stats>
+                <Stats category="IP" leaders={organizedByIp} heading="Innings pitched"></Stats>
             </li>
             <li>
-                <Stats category="ER" leaders={organizedByEr}></Stats>
+                <Stats category="ER" leaders={organizedByEr} heading="Earned runs"></Stats>
             </li>
             <li>
-                <Stats category="W" leaders={organizedByW}></Stats>
+                <Stats category="W" leaders={organizedByW} heading="Wins"></Stats>
             </li>
             <li>
-                <Stats category="L" leaders={organizedByL}></Stats>
+                <Stats category="L" leaders={organizedByL} heading="Losses"></Stats>
             </li>
             <li>
-                <Stats category="K" leaders={organizedByK}></Stats>
+                <Stats category="K" leaders={organizedByK} heading="Strikeouts"></Stats>
             </li>
             <li>
-                <Stats category="BB" leaders={organizedByBb}></Stats>
+                <Stats category="BB" leaders={organizedByBb} heading="Base on balls"></Stats>
             </li>
             <li>
-                <Stats category="SV" leaders={organizedBySv}></Stats>
-            </li>
+                <Stats category="SV" leaders={organizedBySv} heading="Saves"></Stats>
+            </li> 
         </ul>
     )
 }

@@ -55,6 +55,10 @@ const hitterSchema = new mongoose.Schema({
     CS: {
         type: Number,
         default: 0
+    },
+    owner: {
+        type: String,
+        required: true
     }
 })
 

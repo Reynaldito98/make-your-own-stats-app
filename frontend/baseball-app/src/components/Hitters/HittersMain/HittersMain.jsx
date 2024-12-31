@@ -1,6 +1,7 @@
 import '../../General/PlayersMain/PlayersMain.css';
 import PlayersMain from '../../General/PlayersMain/PlayersMain';
 import Hitter from '../Hitter/Hitter';
+import EmptyList from '../../General/EmptyList/EmptyList';
 
 function HittersMain({handleOpen, handleEditPlayerOpen, handleConfirmationOpen, hitterData, handleSelectedPlayer, handleDeleteHitter}) {
     return (
@@ -16,9 +17,9 @@ function HittersMain({handleOpen, handleEditPlayerOpen, handleConfirmationOpen, 
 
             <ul className="players-main__list">
                 {
-                    hitterData.slice(0, 9).map((hitter, index) => {
+                    hitterData.length>0 ? hitterData.slice(0, 9).map((hitter, index) => {
                         return <Hitter key={index} handleEditPlayerOpen={handleEditPlayerOpen} handleConfirmationOpen={handleConfirmationOpen} hitter={hitter} handleSelectedPlayer={handleSelectedPlayer} handleDeleteHitter={handleDeleteHitter}></Hitter>
-                    })
+                    }) : <EmptyList message="No hitters yet added"></EmptyList>
                 }
             </ul>
 
@@ -28,9 +29,9 @@ function HittersMain({handleOpen, handleEditPlayerOpen, handleConfirmationOpen, 
 
             <ul className="players-main__list">
                 {
-                    hitterData.slice(9).map((hitter, index) => {
+                    hitterData.length>9 ? hitterData.slice(9).map((hitter, index) => {
                         return <Hitter key={index} handleEditPlayerOpen={handleEditPlayerOpen} handleConfirmationOpen={handleConfirmationOpen} hitter={hitter} handleSelectedPlayer={handleSelectedPlayer}></Hitter>
-                    })
+                    }) : <EmptyList message="No hitters yet added"></EmptyList>
                 }
             </ul>
         </PlayersMain>

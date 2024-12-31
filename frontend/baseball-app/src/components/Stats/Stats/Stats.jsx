@@ -1,9 +1,9 @@
 import './Stats.css';
 
-function Stats({category, leaders}) {
+function Stats({category, leaders, heading}) {
     return (
-            <>
-                <h2 className="table__title">{category}</h2>
+            <div className="table__container">
+                <h2 className="table__title">{heading}</h2>
                 <table className="table">
                     <thead>
                         <tr>
@@ -11,20 +11,25 @@ function Stats({category, leaders}) {
                             <th>{category}</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        {
-                            leaders.slice(0, 5).map(player => {
-                                return (
-                                    <tr key={player._id}>
-                                        <td className="table__name">{player.name}</td>
-                                        <td>{player[category] || '0'}</td>
-                                    </tr>
-                                )
-                            })
-                        }
-                    </tbody>
+                    {
+                        leaders.length>0 ?
+                            <tbody>
+                                {
+                                    leaders.slice(0, 5).map(player => {
+                                        return (
+                                            <tr key={player._id}>
+                                                <td className="table__name">{player.name}</td>
+                                                <td>{player[category] || '0'}</td>
+                                            </tr>
+                                        )
+                                    })
+                                }
+                            </tbody>
+                            :
+                            <p className="table__empty-list">No players in the team</p>
+                    }
                 </table>
-            </>
+            </div>
     )
 }
 

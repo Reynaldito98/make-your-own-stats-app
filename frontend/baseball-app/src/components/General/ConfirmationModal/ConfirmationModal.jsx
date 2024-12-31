@@ -14,7 +14,7 @@ function ConfirmationModal({modalOpened, handleClose, handleDeleteHitter, select
 
     return (
         <ModalWithForm modalOpened={modalOpened} handleClose={handleClose}>
-            <h1 className="modal__title">Are you sure you would like to release this player</h1>
+            <h1 className="modal__title">Are you sure you would like to release {selectedPlayer.name}</h1>
             <button type="submit" className="modal__button" onClick={handleRelease}>Yes, release him</button>
         </ModalWithForm>
     )

@@ -1,6 +1,7 @@
 import PlayersMain from "../../General/PlayersMain/PlayersMain";
 import Pitcher from "../Pitcher/Pitcher";
 import "../../General/PlayersMain/PlayersMain.css";
+import EmptyList from "../../General/EmptyList/EmptyList";
 
 function PitchersMain({handleOpen, handleEditPlayerOpen, handleConfirmationOpen, pitcherData, handleSelectedPlayer, handleDeletePitcher}) {
     return (
@@ -16,9 +17,9 @@ function PitchersMain({handleOpen, handleEditPlayerOpen, handleConfirmationOpen,
 
             <ul className="players-main__list">
                 {
-                    pitcherData.slice(0, 5).map(pitcher => {
+                    pitcherData.length>0 ? pitcherData.slice(0, 5).map(pitcher => {
                         return <Pitcher key={pitcher._id} handleEditPlayerOpen={handleEditPlayerOpen} handleConfirmationOpen={handleConfirmationOpen} pitcher={pitcher} handleSelectedPlayer={handleSelectedPlayer} handleDeletePitcher={handleDeletePitcher}></Pitcher>
-                    })
+                    }) : <EmptyList message="No pitchers yet added"></EmptyList>
                 }
             </ul>
 
@@ -28,9 +29,9 @@ function PitchersMain({handleOpen, handleEditPlayerOpen, handleConfirmationOpen,
 
             <ul className="players-main__list">
                 {
-                    pitcherData.slice(5).map(pitcher => {
+                    pitcherData.length>5 ? pitcherData.slice(5).map(pitcher => {
                         return <Pitcher key={pitcher._id} handleEditPlayerOpen={handleEditPlayerOpen} handleConfirmationOpen={handleConfirmationOpen} pitcher={pitcher} handleSelectedPlayer={handleSelectedPlayer} handleDeletePitcher={handleDeletePitcher}></Pitcher>
-                    })
+                    }) : <EmptyList message="No pitchers yet added"></EmptyList>
                 }
             </ul>
         </PlayersMain>

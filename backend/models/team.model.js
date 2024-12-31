@@ -22,6 +22,10 @@ const teamSchema = new mongoose.Schema({
     losses: {
         type: Number,
         default: 0
+    }, 
+    owner: {
+        type: String,
+        required: true
     }
 })
 

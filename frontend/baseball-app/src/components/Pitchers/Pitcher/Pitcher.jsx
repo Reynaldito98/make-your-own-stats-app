@@ -2,11 +2,10 @@ import Player from "../../General/Player/Player";
 import '../../General/Player/Player.css';
 import altuve from '../../../images/altuve.png';
 
-function Pitcher({handleEditPlayerOpen, handleConfirmationOpen, pitcher, handleSelectedPlayer, handleDeletePitcher}) {
+function Pitcher({handleEditPlayerOpen, handleConfirmationOpen, pitcher, handleSelectedPlayer}) {
     const handleClick = () => {
         handleEditPlayerOpen();
         handleSelectedPlayer(pitcher);
-        console.log(pitcher)
     }
 
     const handleRelease = () => {

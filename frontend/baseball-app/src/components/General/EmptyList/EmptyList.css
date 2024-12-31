@@ -1,0 +1,12 @@
+.empty-list {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.empty-list__message {
+    font-size: 36px;
+    color: rgb(160, 158, 158);
+}

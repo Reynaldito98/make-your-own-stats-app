@@ -6,8 +6,11 @@ const checkResponse = (res) => {
     }
 }
 
-const headers = {
-    'Content-Type': 'application/json'
+const headers = (token) => {
+    return {
+        'Content-Type': 'application/json',
+        authorization: `Bearer ${token}`
+    }
 }
 
 export {checkResponse, headers};

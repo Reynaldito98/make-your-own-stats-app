@@ -1,0 +1,38 @@
+.blackground {
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+}
+
+.blackground__picture {
+    background-image: url('../../../images/stadium.jpg');
+    width: 100%;
+    height: calc(100vh - 80px);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-size: cover;
+    z-index: -100;
+    filter: brightness(50%);
+}
+
+.blackground__title {
+    margin: 0px;
+    font-size: 56px;
+    font-family: 'Roboto Slab', sans-serif;
+    color: #fff;
+    width: 900px;
+    text-align: center;
+}
+
+.blackground__author {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    width: 900px;
+    text-align: center;
+}

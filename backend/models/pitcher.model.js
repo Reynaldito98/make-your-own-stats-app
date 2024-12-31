@@ -47,6 +47,10 @@ const pitcherSchema = new mongoose.Schema({
     SV: {
         type: Number,
         default: 0
+    },
+    owner: {
+        type: String,
+        required: true
     }
 })
 

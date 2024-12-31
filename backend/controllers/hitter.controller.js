@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import Hitter from "../models/hitter.model.js";
 
 const createHitter = async (req, res) => {
-    const hitter = req.body;
+    const hitter = {...req.body, owner: req.user._id};
 
     if(!hitter.name || !hitter.position || !hitter.imageUrl) {
         return res.status(400).json({success: false, message: "Please, provide all fields"})

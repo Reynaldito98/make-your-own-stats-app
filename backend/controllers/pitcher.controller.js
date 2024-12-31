@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 import Pitcher from "../models/pitcher.model.js";
 
 const createPitcher = async (req, res) => {
-    const pitcher = req.body;
+    const pitcher = {...req.body, owner: req.user._id};
 
     if(!pitcher.name || !pitcher.position || !pitcher.imageUrl) {
         return res.status(400).json({success: false, message: "Please, provide all fields"});

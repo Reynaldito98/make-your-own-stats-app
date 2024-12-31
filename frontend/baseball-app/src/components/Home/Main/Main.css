@@ -5,6 +5,7 @@
     padding-top: 40px;
     position: relative;
     padding-bottom: 20px;
+    min-height: 600px;
 }
 
 .main__welcome {
@@ -35,7 +36,7 @@
 }
 
 .main__image {
-    width: 600px;
+    max-width: 400px;
     margin-top: 15px;
 }
 

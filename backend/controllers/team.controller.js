@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import Team from "../models/team.model.js";
 
 const createTeam = async (req, res) => {
-    const team = req.body;
+    const team = {...req.body, owner: req.user._id} ;
 
     if(!team.name || !team.logo) {
         return res.status(400).json({success: false, message: 'Please, provide all fields'})

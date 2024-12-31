@@ -1,15 +1,16 @@
 import express from "express";
 import { createHitter, getHitters, updateHitter, deleteHitter } from "../controllers/hitter.controller.js";
+import { auth } from "../middleware/auth.js";
 
 const hitterRoutes = express.Router();
 
-hitterRoutes.post('/', createHitter)
+hitterRoutes.post('/', auth, createHitter)
 
-hitterRoutes.get('/', getHitters)
+hitterRoutes.get('/', auth, getHitters)
 
-hitterRoutes.put('/:id', updateHitter)
+hitterRoutes.put('/:id', auth, updateHitter)
 
-hitterRoutes.delete('/:id', deleteHitter)
+hitterRoutes.delete('/:id', auth, deleteHitter)
 
 
 export default hitterRoutes;
