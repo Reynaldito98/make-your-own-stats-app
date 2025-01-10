@@ -39,3 +39,9 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+
+@media screen and (max-width: 420px) {
+    .card {
+        width: 280px;
+    }
+}

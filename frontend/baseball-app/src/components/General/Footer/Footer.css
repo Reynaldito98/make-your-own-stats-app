@@ -1,13 +1,39 @@
 .footer {
     background-color: rgb(33, 32, 32);
     display: flex;
+    justify-content: space-between;
     padding-left: 20px;
     padding-right: 50px;
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
-    gap: 40px;
     color: #fff;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     font-size: 18px;
+}
+
+@media screen and (max-width: 760px) {
+    .footer {
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .footer {
+        justify-content: left;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer p{
+        width: 280px;
+        margin: 0px;
+        text-align: center;
+    }
 }

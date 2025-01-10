@@ -52,3 +52,30 @@
     border-radius: 10px;
     cursor: pointer;  
 }
+
+@media screen and (max-width: 1000px) {
+    .player {
+        justify-content: left;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .player {
+        padding-left: 10px;
+    }
+
+    .player__number_avg {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .player__image {
+        width: 75px;
+    }
+
+    .player__name {
+        font-size: 15px;
+    }
+}

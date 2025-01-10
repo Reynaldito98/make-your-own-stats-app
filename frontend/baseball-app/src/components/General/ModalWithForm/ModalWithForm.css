@@ -136,3 +136,13 @@
     height: 0px;
     font-size: 12px;
 }
+
+@media screen and (max-width: 580px) {
+    .modal__container {
+        width: 220px;
+    }
+
+    .modal__input2{
+        width: 50px;
+    }
+}

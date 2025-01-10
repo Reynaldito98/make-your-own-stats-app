@@ -7,6 +7,7 @@
     padding-bottom: 40px;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .news-main__background {
@@ -53,4 +54,28 @@
 
 .news-main__show-more:hover {
     box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-width: 1200px) {
+
+    .news-main__list {
+        grid-template-columns: 360px 360px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .news-main__list {
+        grid-template-columns: 360px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .news-main {
+        padding-right: 50px;
+        padding-left: 20px;
+    }
+
+    .news-main__heading {
+        font-size: 15px;
+    }
 }

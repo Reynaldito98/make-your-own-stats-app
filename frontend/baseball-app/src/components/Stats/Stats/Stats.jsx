@@ -19,7 +19,7 @@ function Stats({category, leaders, heading}) {
                                         return (
                                             <tr key={player._id}>
                                                 <td className="table__name">{player.name}</td>
-                                                <td>{player[category] || '0'}</td>
+                                                <td>{player[category]!==".NaN" ? player[category]!=="NaN" ? player[category]: '0.00' : '.000'}</td>
                                             </tr>
                                         )
                                     })

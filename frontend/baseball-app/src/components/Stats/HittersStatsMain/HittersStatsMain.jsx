@@ -26,7 +26,7 @@ function HittersStatsMain({hitterData, modalOpened}) {
     }, [hitterData, modalOpened])
 
     organizedByAverage.map(player=>{
-        player['AVG'] = `.${Math.round(player.H * 1000 / player.AB)}`;
+        player['AVG'] = Math.round(player.H * 1000 / player.AB)!==NaN ? `.${Math.round(player.H * 1000 / player.AB)}` : '.000'
     })
 
     return (

@@ -24,7 +24,7 @@ function PitchersStatsMain({pitcherData, modalOpened}) {
     }, [pitcherData, modalOpened])
 
     organizedByEra.map(player => {
-        player['ERA'] = (player.ER * 9 / player.IP).toFixed(2)
+        player['ERA'] = player.ER * 9 / player.IP !== NaN ? (player.ER * 9 / player.IP).toFixed(2) : '0.00'
     })
 
     return (

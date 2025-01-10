@@ -58,14 +58,6 @@ function EditPitcherModal({modalOpened, handleClose, selectedPlayer, handleUpdat
         } else {
             setKValid(false);
         }
-
-        if(evt.target.value > k) {
-            if(ip===(Math.floor(ip) + 0.2)) {
-                setIp(Number(ip) + 0.8)
-            } else {
-                setIp(Number(ip) + 0.1)
-            }
-        }
     }
 
     const handleBb = (evt) => {
