@@ -1,7 +1,7 @@
 import { checkResponse } from "./utils.js";
 
 const registerUser = (username, email, password) => {
-    return fetch('https://make-your-own-stats-app-back.vercel.app/api/signup', {
+    return fetch('api/signup', {
         method: 'POST',
         headers: {
             Accept: "application/json",

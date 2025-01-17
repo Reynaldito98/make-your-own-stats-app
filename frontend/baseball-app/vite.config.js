@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: 'https://make-your-own-stats-app-back-5c5rihehg.vercel.app',
+        target: 'https://make-your-own-stats-app-back.vercel.app',
       }
     },  
   }
