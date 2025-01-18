@@ -1,5 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import cors from "cors";
 import { connectDB } from './config/db.js';
 import teamRouter from './routes/team.route.js';
 import hitterRoutes from './routes/hitter.route.js';
@@ -10,6 +11,8 @@ import {createUser, loginUser} from './controllers/user.controller.js';
 dotenv.config();
 const app = express();
 app.use(express.json());
+
+app.use(cors());
 
 app.post('/api/signup', createUser);
 app.post('/api/signin', loginUser);
