@@ -25,6 +25,6 @@ app.use('/api/team', teamRouter);
 app.use('/api/hitter', hitterRoutes);
 app.use('/api/pitcher', pitcherRoutes);
 
-app.listen(4000, () => {s
+app.listen(4000, () => {
     console.log("Server started at http://localhost:4000");
 })
