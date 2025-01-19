@@ -1,5 +1,5 @@
 import "./Header.css";
-import mlb from '../../../images/mlb.png';
+import mlb from '../../../images/logo.jpeg';
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 
