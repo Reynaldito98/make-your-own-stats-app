@@ -7,8 +7,8 @@ const dateSevenDaysAgo = `${sevenDaysDate.getFullYear()}-${String(sevenDaysDate.
 import {checkResponse} from './utils.js';
 
 const getNews = (teamName) => {
-    return fetch(`https://api.thenewsapi.com/v1/news/headlines?locale=us&language=en&api_token=BlzFiz0ALsWFAnkHTr9t2wUCR0Hmvgl0TieQopbK`)
-                .then(checkResponse)
+    return fetch(`https://api.thenewsapi.com/v1/news/all?locale=us&language=en&api_token=BlzFiz0ALsWFAnkHTr9t2wUCR0Hmvgl0TieQopbK&search=${teamName}&country=us$published_after=${dateSevenDaysAgo}&published_before=${today}`)
+        .then(checkResponse)
 }
 
 export {getNews}

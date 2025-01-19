@@ -331,7 +331,7 @@ function App() {
 
           getNews(data.data.filter(team => team.owner===userId)[0].name)
             .then(dat => {
-              setNewsData(dat.articles)
+              setNewsData(dat["data"]);
             })
             .catch(err => {
               console.log(err);
